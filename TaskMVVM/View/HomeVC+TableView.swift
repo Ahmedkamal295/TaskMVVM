@@ -38,7 +38,7 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         
         //MARK:- formatterDate
         let date = Date()
-        let formate = date.getFormattedDate(format: "yyyy-MM-dd")
+        let formate = date.getFormattedDate(format: "yyyy-MM-dd-HH:mm")
         cell.datePublisherLbl.text = formate
 
         //https://www.nytimes.com/images/2021/05/11/world/11israel-gaza-video-new/11israel-gaza-video-new-popup.jpg

@@ -19,7 +19,7 @@ extension DetailsVC {
 
         //MARK:- formatterDate
         let date = Date()
-        let formate = date.getFormattedDate(format: "yyyy-MM-dd")
+        let formate = date.getFormattedDate(format: "yyyy-MM-dd-HH:mm")
         datePublisher.text = formate
         
         if (model?.multimedia?.count ?? 0) > 0 {
