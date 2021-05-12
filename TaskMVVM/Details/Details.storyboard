@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DetailsVC-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="DetailsVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Y6W-OH-hqX" customClass="DetailsVC" customModule="TaskMVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hgH-Tq-ao4">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="203"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="203" id="XtQ-De-9AD"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News title" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VI-Eh-TQh">
+                                <rect key="frame" x="16" y="213" width="86.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date publisher" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zvM-Hg-e48">
+                                <rect key="frame" x="231.5" y="213" width="127.5" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name Publisher" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ln9-9K-cIL">
+                                <rect key="frame" x="16" y="245" width="343" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="hgH-Tq-ao4" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="0qe-Ji-Uq8"/>
+                            <constraint firstItem="Ln9-9K-cIL" firstAttribute="leading" secondItem="7VI-Eh-TQh" secondAttribute="leading" id="1Gr-Pv-W2B"/>
+                            <constraint firstItem="Ln9-9K-cIL" firstAttribute="top" secondItem="7VI-Eh-TQh" secondAttribute="bottom" constant="8" symbolic="YES" id="Zf8-Vj-FzB"/>
+                            <constraint firstItem="7VI-Eh-TQh" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="16" id="bTN-2k-hSt"/>
+                            <constraint firstItem="Ln9-9K-cIL" firstAttribute="trailing" secondItem="zvM-Hg-e48" secondAttribute="trailing" id="eBi-6W-GoZ"/>
+                            <constraint firstItem="hgH-Tq-ao4" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="jQt-y4-fcn"/>
+                            <constraint firstItem="zvM-Hg-e48" firstAttribute="top" secondItem="7VI-Eh-TQh" secondAttribute="top" id="lkA-SQ-6E6"/>
+                            <constraint firstItem="hgH-Tq-ao4" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="nli-Iz-dwW"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="zvM-Hg-e48" secondAttribute="trailing" constant="16" id="nuQ-Z2-whQ"/>
+                            <constraint firstItem="7VI-Eh-TQh" firstAttribute="top" secondItem="hgH-Tq-ao4" secondAttribute="bottom" constant="10" id="uFB-iR-evI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="datePublisher" destination="zvM-Hg-e48" id="fdU-73-T2L"/>
+                        <outlet property="imgPublisher" destination="hgH-Tq-ao4" id="hgC-e9-otA"/>
+                        <outlet property="namePublisher" destination="Ln9-9K-cIL" id="PfG-Ni-jts"/>
+                        <outlet property="newsTitle" destination="7VI-Eh-TQh" id="6lE-CD-fFS"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.40000000000001" y="74.212893553223395"/>
+        </scene>
+    </scenes>
+</document>
